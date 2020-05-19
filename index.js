@@ -4,6 +4,10 @@ function run (){
     $(deleteMechanic);
 }
 
+//this would be better if it is ul.length but I don't know how to do that
+let counter= 3;
+
+console.log(counter);
 
 //function shopping-list (){
 // all click functions work
@@ -27,6 +31,8 @@ function addMechanic (){
           '</button>' +
             '</div>' +
             '</li>');
+        counter ++;
+        
     }
 )};
 
@@ -34,18 +40,17 @@ function addMechanic (){
 //  when shopping-item-toggle is pressed this function adds  shopping-item__checked class to span class
 // This Works
 function checkMechanic (){
-    $('.shopping-item-toggle').click(function(event) {
-        console.log('check');
+    $('.shopping-item-toggle').on("click", function(event) {
         $(this).closest('li').find(".shopping-item").toggleClass('shopping-item__checked');
     }    
 )};
 //This function removes this list item entierly 
 // when shopping-item-delete is pressed
-// This Works
+// If i used the coutner it would just delete the latest item 
 function deleteMechanic (){
-    $('.shopping-item-delete').click(function(event) {
-        $(this).closest('li').remove();
-        
+    $('.shopping-item-delete').on("click", function(event) {
+        console.log($(this).closest);
+        $(this).closest('ul').remove();
     }
 )};
 
@@ -53,6 +58,15 @@ function deleteMechanic (){
 
 
 
+
+
+
+
+
+
+
+
+$(run);
 
 
 
