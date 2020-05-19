@@ -5,9 +5,6 @@ function run (){
 }
 
 //this would be better if it is ul.length but I don't know how to do that
-let counter= 3;
-
-console.log(counter);
 
 //function shopping-list (){
 // all click functions work
@@ -31,7 +28,7 @@ function addMechanic (){
           '</button>' +
             '</div>' +
             '</li>');
-        counter ++;
+        ;
         
     }
 )};
